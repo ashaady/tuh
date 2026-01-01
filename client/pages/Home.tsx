@@ -296,7 +296,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.05 }}
                 viewport={{ once: true }}
-                className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)]"
+                className="w-[calc(33.333%-11px)] sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)]"
               >
                 <ProductCard
                   id={product.id}
