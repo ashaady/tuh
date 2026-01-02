@@ -460,7 +460,7 @@ export default function AdminDashboardNew() {
         );
         setSelectedOrder(null);
         playNotificationSound();
-        toast.success(`Statut: ${STATUS_CONFIG[newStatus].label}`);
+        toast.success(`Statut: ${STATUS_CONFIG[newStatus]?.label || newStatus}`);
       } else {
         toast.error("Erreur lors de la mise à jour");
       }
