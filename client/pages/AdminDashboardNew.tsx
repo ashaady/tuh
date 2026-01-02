@@ -634,11 +634,11 @@ export default function AdminDashboardNew() {
                             {order.total.toLocaleString()} F
                           </p>
 
-                          <Badge className={STATUS_CONFIG[order.status].color}>
+                          <Badge className={STATUS_CONFIG[order.status]?.color || "bg-gray-100"}>
                             <span
-                              className={STATUS_CONFIG[order.status].bgColor}
+                              className={STATUS_CONFIG[order.status]?.bgColor || "text-gray-800"}
                             >
-                              {STATUS_CONFIG[order.status].label}
+                              {STATUS_CONFIG[order.status]?.label || order.status}
                             </span>
                           </Badge>
 
@@ -760,11 +760,11 @@ export default function AdminDashboardNew() {
                           <p className="text-lg font-bold text-primary">
                             {order.total.toLocaleString()} F
                           </p>
-                          <Badge className={STATUS_CONFIG[order.status].color}>
+                          <Badge className={STATUS_CONFIG[order.status]?.color || "bg-gray-100"}>
                             <span
-                              className={STATUS_CONFIG[order.status].bgColor}
+                              className={STATUS_CONFIG[order.status]?.bgColor || "text-gray-800"}
                             >
-                              {STATUS_CONFIG[order.status].label}
+                              {STATUS_CONFIG[order.status]?.label || order.status}
                             </span>
                           </Badge>
                         </div>
@@ -859,12 +859,12 @@ export default function AdminDashboardNew() {
                             </p>
 
                             <Badge
-                              className={STATUS_CONFIG[order.status].color}
+                              className={STATUS_CONFIG[order.status]?.color || "bg-gray-100"}
                             >
                               <span
-                                className={STATUS_CONFIG[order.status].bgColor}
+                                className={STATUS_CONFIG[order.status]?.bgColor || "text-gray-800"}
                               >
-                                {STATUS_CONFIG[order.status].label}
+                                {STATUS_CONFIG[order.status]?.label || order.status}
                               </span>
                             </Badge>
 
@@ -1269,14 +1269,14 @@ export default function AdminDashboardNew() {
                       <p>
                         <span className="text-muted-foreground">Statut :</span>{" "}
                         <Badge
-                          className={STATUS_CONFIG[selectedOrder.status].color}
+                          className={STATUS_CONFIG[selectedOrder.status]?.color || "bg-gray-100"}
                         >
                           <span
                             className={
-                              STATUS_CONFIG[selectedOrder.status].bgColor
+                              STATUS_CONFIG[selectedOrder.status]?.bgColor || "text-gray-800"
                             }
                           >
-                            {STATUS_CONFIG[selectedOrder.status].label}
+                            {STATUS_CONFIG[selectedOrder.status]?.label || selectedOrder.status}
                           </span>
                         </Badge>
                       </p>
